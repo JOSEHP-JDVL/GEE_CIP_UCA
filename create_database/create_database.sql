@@ -32,3 +32,16 @@ telefono VARCHAR(20) NOT NULL,
 direccion VARCHAR(255) NOT NULL
 );
 GO
+
+-- clientes
+CREATE TABLE clientes (
+id INT PRIMARY KEY IDENTITY(1,1),
+tipo_persona VARCHAR (55) NOT NULL,
+persona_id INT NOT NULL);
+GO
+
+ALTER TABLE clientes
+ADD CONSTRAINT check_tipo_persona CHECK (tipo_persona IN ('Persona_Natural', 'Persona Jurídica'))
+
+SELECT*FROM clientes;
+INSERT INTO clientes VALUES ('Persona_Natural','1');
