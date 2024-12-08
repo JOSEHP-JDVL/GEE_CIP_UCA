@@ -125,3 +125,4 @@ pago_id INT NOT NULL,
 monto_afectado FLOAT NOT NULL,
 CONSTRAINT FK_cuotas_detalles_pagos FOREIGN KEY (cuota_id) REFERENCES cuotas(id),
 CONSTRAINT FK_pagos_detalles_pagos FOREIGN KEY (pago_id) REFERENCES pagos(id));
+
