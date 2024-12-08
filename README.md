@@ -22,3 +22,5 @@ Los clientes pueden realizar pagos parciales o totales de una o más cuotas. Se 
 ##Sucursales (opcional):
 
 Cada préstamo debe estar vinculado a la sucursal donde fue otorgado. Cada sucursal tiene un código único, dirección y gerente asignado.
+
+![Uploading image.png…]()
