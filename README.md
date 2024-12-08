@@ -23,4 +23,11 @@ Los clientes pueden realizar pagos parciales o totales de una o más cuotas. Se 
 
 Cada préstamo debe estar vinculado a la sucursal donde fue otorgado. Cada sucursal tiene un código único, dirección y gerente asignado.
 
-![Uploading image.png…]()
+#### Modelo Entidad Relación
+
+![image](https://github.com/user-attachments/assets/10e7ccea-f4d9-45a4-bf4f-6ce7acea6044)
+
+
+#### Modelo Lógico
+
+![image](https://github.com/user-attachments/assets/ccf1e63d-d84a-4895-92be-524b3c5fa93e)
