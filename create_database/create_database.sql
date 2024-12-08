@@ -1,0 +1,2 @@
+CREATE DATABASE prestamos_financieros_ejercicio
+go
