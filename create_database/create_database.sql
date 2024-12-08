@@ -104,3 +104,24 @@ CONSTRAINT FK_clientes_prestamos FOREIGN KEY (cliente_id) REFERENCES clientes(id
 CONSTRAINT FK_sucursales_prestamos FOREIGN KEY (sucursal_id) REFERENCES sucursales(id),
 CONSTRAINT FK_empleados_prestamos FOREIGN KEY (empleado_id) REFERENCES empleados(id),
 CONSTRAINT FK_tipos_prestamo_prestamos FOREIGN KEY (tipo_prestamo_id) REFERENCES tipos_prestamos(id));
+
+--cuotas
+CREATE TABLE cuotas(
+id INT PRIMARY KEY IDENTITY(1,1),
+prestamo_id INT NOT NULL,
+numero_cuota INT NOT NULL,
+monto MONEY NOT NULL,
+fecha_vencimiento DATE NOT NULL,
+estado VARCHAR (50) NOT NULL,
+monto_pendiente MONEY NOT NULL,
+CONSTRAINT FK_prestamo_cuota FOREIGN KEY (prestamo_id) REFERENCES prestamos(id)
+);
+
+--detelle de pagos
+CREATE TABLE detelle_pagos(
+id INT PRIMARY KEY IDENTITY(1,1),
+cuota_id INT NOT NULL,
+pago_id INT NOT NULL,
+monto_afectado FLOAT NOT NULL,
+CONSTRAINT FK_cuotas_detalles_pagos FOREIGN KEY (cuota_id) REFERENCES cuotas(id),
+CONSTRAINT FK_pagos_detalles_pagos FOREIGN KEY (pago_id) REFERENCES pagos(id));
