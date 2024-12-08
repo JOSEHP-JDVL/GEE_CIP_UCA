@@ -63,3 +63,21 @@ monto_abonado MONEY NOT NULL);
 INSERT INTO pagos (codigo_operacion, monto_abonado) VALUES ('000000011',100.00);
 INSERT INTO pagos VALUES ('000000011',DEFAULT,200.00);
 SELECT*FROM pagos;
+
+-- tipo prestamos
+CREATE TABLE tipos_prestamos(
+id INT PRIMARY KEY IDENTITY(1,1),
+nombre VARCHAR (100) NOT NULL,
+descripcion TEXT NULL)
+
+-- empleados
+CREATE TABLE empleados(
+id INT PRIMARY KEY IDENTITY(1,1),
+persona_id INT NOT NULL,
+codigo_empleado VARCHAR (6) NOT NULL,
+cargo VARCHAR (100) NOT NULL,
+supervisor_id INT NULL,
+CONSTRAINT FK_persona_natural_empleados FOREIGN KEY (persona_id) REFERENCES personas_naturales (id),
+CONSTRAINT FK_supervisor_empleado FOREIGN KEY (supervisor_id) REFERENCES empleados (id)
+);
+GO
