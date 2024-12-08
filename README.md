@@ -31,3 +31,7 @@ Cada préstamo debe estar vinculado a la sucursal donde fue otorgado. Cada sucur
 #### Modelo Lógico
 
 ![image](https://github.com/user-attachments/assets/ccf1e63d-d84a-4895-92be-524b3c5fa93e)
+
+#### Modelo Físico
+![image](https://github.com/user-attachments/assets/96e08e2e-8d39-4793-bc49-fa7433387514)
+
