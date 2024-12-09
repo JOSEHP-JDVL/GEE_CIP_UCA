@@ -79,3 +79,11 @@ VALUES
 
 
 -- Repite o ajusta el bloque `INSERT INTO` hasta llegar a los 50 registros
+--falta agregar sucursales
+ALTER TABLE sucursales
+ALTER COLUMN direccion NVARCHAR (500);
+
+ALTER TABLE sucursales
+ALTER COLUMN codigo VARCHAR (20);
+
+-- tipos de prestamos
