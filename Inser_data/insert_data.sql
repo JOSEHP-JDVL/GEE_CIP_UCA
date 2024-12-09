@@ -80,10 +80,132 @@ VALUES
 
 -- Repite o ajusta el bloque `INSERT INTO` hasta llegar a los 50 registros
 --falta agregar sucursales
+
 ALTER TABLE sucursales
 ALTER COLUMN direccion NVARCHAR (500);
 
 ALTER TABLE sucursales
 ALTER COLUMN codigo VARCHAR (20);
 
+USE [prestamos_financieros_ejercicio]
+GO
+
+INSERT INTO [dbo].[sucursales] 
+    ([codigo], [nombres], [direccion])
+VALUES
+    ('SUC001', 'Sucursal Central', 'Av. Principal 123, Lima'),
+    ('SUC002', 'Sucursal Sur', 'Jr. Bolívar 456, Arequipa'),
+    ('SUC003', 'Sucursal Norte', 'Calle Los Olivos 789, Trujillo'),
+    ('SUC004', 'Sucursal Este', 'Av. Los Pinos 101, Cusco'),
+    ('SUC005', 'Sucursal Oeste', 'Jr. Los Cedros 202, Piura'),
+    ('SUC006', 'Sucursal Tacna', 'Calle Las Magnolias 303, Tacna'),
+    ('SUC007', 'Sucursal Puno', 'Av. Los Andes 404, Puno'),
+    ('SUC008', 'Sucursal Chiclayo', 'Jr. Las Rosas 505, Chiclayo'),
+    ('SUC009', 'Sucursal Iquitos', 'Calle Las Flores 606, Iquitos'),
+    ('SUC010', 'Sucursal Huancayo', 'Av. Las Violetas 707, Huancayo'),
+    ('SUC011', 'Sucursal Tarapoto', 'Jr. Los Claveles 808, Tarapoto'),
+    ('SUC012', 'Sucursal Ayacucho', 'Calle Los Jazmines 909, Ayacucho'),
+    ('SUC013', 'Sucursal Tumbes', 'Av. Las Begonias 111, Tumbes'),
+    ('SUC014', 'Sucursal Huaraz', 'Jr. Las Dalias 222, Huaraz'),
+    ('SUC015', 'Sucursal Juliaca', 'Calle Las Gardenias 333, Juliaca'),
+    ('SUC016', 'Sucursal Moquegua', 'Av. Las Acacias 444, Moquegua'),
+    ('SUC017', 'Sucursal Cajamarca', 'Jr. Los Girasoles 555, Cajamarca'),
+    ('SUC018', 'Sucursal Cusco', 'Calle Las Azaleas 666, Cusco'),
+    ('SUC019', 'Sucursal Ucayali', 'Av. Las Hortencias 777, Ucayali'),
+    ('SUC020', 'Sucursal Madre de Dios', 'Jr. Los Tulipanes 888, Madre de Dios'),
+    ('SUC021', 'Sucursal San Martín', 'Calle Las Camelias 999, San Martín'),
+    ('SUC022', 'Sucursal Ancash', 'Av. Los Geranios 1234, Ancash'),
+    ('SUC023', 'Sucursal Huánuco', 'Jr. Las Palmas 5678, Huánuco'),
+    ('SUC024', 'Sucursal Pasco', 'Calle Las Orquídeas 9101, Pasco'),
+    ('SUC025', 'Sucursal Apurímac', 'Av. Los Sauces 1122, Apurímac'),
+    ('SUC026', 'Sucursal Lambayeque', 'Jr. Las Hortensias 3344, Lambayeque'),
+    ('SUC027', 'Sucursal Ica', 'Calle Las Magnolias 5566, Ica'),
+    ('SUC028', 'Sucursal Amazonas', 'Av. Las Rosas 7788, Amazonas'),
+    ('SUC029', 'Sucursal Callao', 'Jr. Los Claveles 9900, Callao'),
+    ('SUC030', 'Sucursal Lima Norte', 'Calle Los Cedros 1012, Lima Norte'),
+    ('SUC031', 'Sucursal Lima Sur', 'Av. Las Begonias 2323, Lima Sur'),
+    ('SUC032', 'Sucursal Lima Este', 'Jr. Las Azaleas 4545, Lima Este'),
+    ('SUC033', 'Sucursal Lima Oeste', 'Calle Las Gardenias 6767, Lima Oeste'),
+    ('SUC034', 'Sucursal Loreto', 'Av. Los Olivos 8989, Loreto'),
+    ('SUC035', 'Sucursal Piura', 'Jr. Las Camelias 1111, Piura'),
+    ('SUC036', 'Sucursal Junín', 'Calle Las Flores 2222, Junín'),
+    ('SUC037', 'Sucursal Huancavelica', 'Av. Los Girasoles 3333, Huancavelica'),
+    ('SUC038', 'Sucursal Tingo María', 'Jr. Las Retamas 4444, Tingo María'),
+    ('SUC039', 'Sucursal Moyobamba', 'Calle Las Hortencias 5555, Moyobamba'),
+    ('SUC040', 'Sucursal Puerto Maldonado', 'Av. Las Acacias 6666, Puerto Maldonado'),
+    ('SUC041', 'Sucursal Chimbote', 'Jr. Los Tulipanes 7777, Chimbote'),
+    ('SUC042', 'Sucursal Sullana', 'Calle Las Jazmines 8888, Sullana'),
+    ('SUC043', 'Sucursal Cañete', 'Av. Los Geranios 9999, Cañete'),
+    ('SUC044', 'Sucursal Huacho', 'Jr. Las Magnolias 1110, Huacho'),
+    ('SUC045', 'Sucursal Ilo', 'Calle Los Claveles 2220, Ilo'),
+    ('SUC046', 'Sucursal Pisco', 'Av. Las Rosas 3330, Pisco'),
+    ('SUC047', 'Sucursal Huaral', 'Jr. Las Gardenias 4440, Huaral'),
+    ('SUC048', 'Sucursal Chanchamayo', 'Calle Los Cedros 5550, Chanchamayo'),
+    ('SUC049', 'Sucursal Abancay', 'Av. Las Begonias 6660, Abancay'),
+    ('SUC050', 'Sucursal Yungay', 'Jr. Las Dalias 7770, Yungay');
+
+
 -- tipos de prestamos
+SELECT*FROM tipos_prestamos;
+
+INSERT INTO tipos_prestamos VALUES	 ('Prestamo personal',''),
+        ('Prestamo Hipotecario',''),
+		('Prestamo Vehicular','');
+
+
+-- empleados INSERTAR DATA A PARTIR DE OTRA CONSULTA
+SELECT*FROM personas_naturales
+
+
+USE prestamos_financieros_ejercicio;
+GO
+
+INSERT INTO [dbo].[personas_naturales] 
+([numero_documento], [nombres], [apellido_paterno], [apellido_materno], [email], [celular], [direccion]) 
+VALUES
+('70321456789', 'María', 'Pérez', 'González', 'maria.perez@gmail.com', '987654321', 'Av. Primavera 456'),
+('70435698712', 'Carlos', 'Ramírez', 'Quispe', 'carlos.ramirez@hotmail.com', '987654322', 'Calle Las Rosas 123'),
+('70893214567', 'Andrea', 'Mendoza', 'Huamán', 'andrea.mendoza@yahoo.com', '987654323', 'Jr. Los Cedros 789'),
+('70215439876', 'Luis', 'Torres', 'Rojas', 'luis.torres@gmail.com', '987654324', 'Pasaje Las Flores 321'),
+('70123456789', 'Sofía', 'García', 'Flores', 'sofia.garcia@outlook.com', '987654325', 'Av. Los Olivos 654'),
+('70567812345', 'Miguel', 'Fernández', 'Vargas', 'miguel.fernandez@gmail.com', '987654326', 'Calle Pinos 231'),
+('70345987612', 'Daniela', 'Campos', 'Silva', 'daniela.campos@gmail.com', '987654327', 'Av. Las Palmas 987'),
+('70786543210', 'Juan', 'Salas', 'Cruz', 'juan.salas@hotmail.com', '987654328', 'Jr. Los Álamos 456'),
+('70654321987', 'Ana', 'Delgado', 'Paredes', 'ana.delgado@gmail.com', '987654329', 'Calle Las Acacias 789'),
+('70987654321', 'Ricardo', 'Vega', 'Morales', 'ricardo.vega@gmail.com', '987654330', 'Av. El Sol 123');
+
+-- agregando 20 datos mas para la tabla empleados
+INSERT INTO [dbo].[personas_naturales] 
+([numero_documento], [nombres], [apellido_paterno], [apellido_materno], [email], [celular], [direccion]) 
+VALUES
+('70123451234', 'Gabriel', 'Martínez', 'López', 'gabriel.martinez@gmail.com', '998765431', 'Av. Siempre Viva 101'),
+('70234562345', 'Elena', 'Ruiz', 'Chávez', 'elena.ruiz@hotmail.com', '998765432', 'Calle Primavera 203'),
+('70345673456', 'Jorge', 'Villanueva', 'Huerta', 'jorge.villanueva@yahoo.com', '998765433', 'Jr. Los Tulipanes 305'),
+('70456784567', 'Claudia', 'Flores', 'Montes', 'claudia.flores@gmail.com', '998765434', 'Av. Las Magnolias 407'),
+('70567895678', 'Diego', 'Hernández', 'Rivera', 'diego.hernandez@gmail.com', '998765435', 'Pasaje La Paz 509'),
+('70678906789', 'Valeria', 'Salazar', 'Santos', 'valeria.salazar@hotmail.com', '998765436', 'Jr. Los Eucaliptos 601'),
+('70789017890', 'Pedro', 'Mejía', 'Campos', 'pedro.mejia@gmail.com', '998765437', 'Calle Los Robles 703'),
+('70890128901', 'Carmen', 'Ríos', 'Torres', 'carmen.rios@yahoo.com', '998765438', 'Av. El Triunfo 805'),
+('70901239012', 'Lucas', 'Castro', 'Morales', 'lucas.castro@gmail.com', '998765439', 'Jr. Los Olivos 907'),
+('70112340123', 'Marisol', 'Paredes', 'Zambrano', 'marisol.paredes@hotmail.com', '998765440', 'Av. La Aurora 1009'),
+('70223451234', 'Francisco', 'Aguilar', 'Chacón', 'francisco.aguilar@gmail.com', '998765441', 'Calle San Martín 1101'),
+('70334562345', 'Rosa', 'Barrios', 'Mendoza', 'rosa.barrios@hotmail.com', '998765442', 'Jr. Las Violetas 1203'),
+('70445673456', 'Luis', 'Cabrera', 'Vega', 'luis.cabrera@gmail.com', '998765443', 'Av. Las Camelias 1305'),
+('70556784567', 'Ángela', 'Díaz', 'Sánchez', 'angela.diaz@yahoo.com', '998765444', 'Calle La Merced 1407'),
+('70667895678', 'Hugo', 'Espinoza', 'Silva', 'hugo.espinoza@gmail.com', '998765445', 'Jr. Las Palmeras 1509'),
+('70778906789', 'Natalia', 'Gómez', 'Ramírez', 'natalia.gomez@hotmail.com', '998765446', 'Av. Las Amapolas 1601'),
+('70889017890', 'Julio', 'Hidalgo', 'Ortega', 'julio.hidalgo@gmail.com', '998765447', 'Calle La Unión 1703'),
+('70990128901', 'Carla', 'Jiménez', 'Paz', 'carla.jimenez@yahoo.com', '998765448', 'Jr. Las Margaritas 1805'),
+('70101239012', 'Alberto', 'Luna', 'Rojas', 'alberto.luna@gmail.com', '998765449', 'Av. Los Sauces 1907'),
+('70212340123', 'Teresa', 'Moreno', 'Quintana', 'teresa.moreno@hotmail.com', '998765450', 'Calle El Progreso 2009');
+
+
+SELECT*FROM empleados;
+INSERT INTO empleados
+SELECT
+    id,
+	CONCAT(SUBSTRING(apellido_paterno,1,1),SUBSTRING(apellido_materno,1,1),'00',ROUND(RAND()*10,0)) AS 'codigo_empleado',
+	'supervisor' AS 'cargo',
+	NULL AS 'supervisor_id'
+FROM personas_naturales
+WHERE id >=50
