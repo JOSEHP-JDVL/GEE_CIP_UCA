@@ -224,3 +224,4 @@ SELECT 'Persona_Natural', id
 FROM personas_naturales
 WHERE id<=49;
 
+SELECT*FROM personas_naturales;
