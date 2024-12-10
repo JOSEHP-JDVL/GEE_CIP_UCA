@@ -209,3 +209,18 @@ SELECT
 	NULL AS 'supervisor_id'
 FROM personas_naturales
 WHERE id >=50
+
+-- clientes
+SELECT*FROM clientes;
+-- pra eliminar
+DELETE FROM clientes;
+
+INSERT INTO clientes
+SELECT 'Persona Jurídica', id
+FROM personas_juridicas;
+
+INSERT INTO clientes
+SELECT 'Persona_Natural', id
+FROM personas_naturales
+WHERE id<=49;
+
